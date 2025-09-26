@@ -1695,12 +1695,12 @@ export default function Index({ params }: any) {
 
                 <div className='flex flex-row gap-2 items-center justify-center'>
                   <span className="text-sm text-zinc-100">
-                    USDT지갑:{' '}
+                    지갑주소:{' '}
                   </span>
                   <button
                     onClick={() => {
                       navigator.clipboard.writeText(address);
-                      toast.success("USDT지갑주소가 복사되었습니다.");
+                      toast.success("지갑주소가 복사되었습니다.");
                     }}
                     className="text-sm underline text-zinc-100 hover:text-zinc-200"
                   >
@@ -1717,10 +1717,6 @@ export default function Index({ params }: any) {
                   <div className="flex flex-row items-center justify-center gap-2">
                     <span className="text-xl font-semibold text-zinc-100">
                       {Number(balance).toFixed(2)}
-                    </span>
-                    {' '}
-                    <span className="text-sm text-zinc-100">
-                      USDT
                     </span>
                   </div>
                 </div>
@@ -1793,13 +1789,13 @@ export default function Index({ params }: any) {
 
                   <span className="text-lg text-zinc-500">
 
-                    상점으로 USDT를 전송중입니다.
+                    상점으로 코인을 전송중입니다.
                   </span>
                 </div>
 
               )}
 
-
+              {/*
               {
               orderId && buyOrders.length > 0
               && buyOrders[0]?.paymentMethod === 'bank'
@@ -1816,11 +1812,12 @@ export default function Index({ params }: any) {
                   />
 
                   <span className="text-lg text-zinc-500">
-                    당신의 USDT가 상점으로 전송되었습니다. 상점에서 충전 상태를 확인할 수 있습니다.
+                    당신의 코인이 상점으로 전송되었습니다. 상점에서 충전 상태를 확인할 수 있습니다.
                   </span>
                 </div>
 
               )}
+              */}
 
               
             </div>
@@ -1920,7 +1917,7 @@ export default function Index({ params }: any) {
 
                       <div className=" flex flex-col gap-2 items-start">
                         <div className="text-5xl font-semibold text-zinc-500">
-                          {Number(balance).toFixed(2)} <span className="text-lg">USDT</span>
+                          {Number(balance).toFixed(3)}
                         </div>
                       </div>
 
@@ -2842,7 +2839,7 @@ export default function Index({ params }: any) {
 
 
                                     <p className="text-lg text-zinc-500">
-                                      구매량:{' '}{item.usdtAmount}{' '}USDT
+                                      구매량:{' '}{item.usdtAmount}
                                     </p>
                                     <p className="text-sm text-zinc-500">
                                       환율:{' '}{
@@ -2934,7 +2931,7 @@ export default function Index({ params }: any) {
                                           height={32}
                                         />
                                         <p className="text-lg text-green-500">
-                                          판매자가 입금을 확인하고 USDT를 전송했습니다.
+                                          판매자가 입금을 확인하고 코인을 전송했습니다.
                                         </p>
                                       </div>
 
@@ -3159,7 +3156,7 @@ export default function Index({ params }: any) {
 
                                                 }}
                                               >
-                                                구매 {item.usdtAmount} USDT
+                                                구매 {item.usdtAmount}
                                               </button>
 
 

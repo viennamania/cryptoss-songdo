@@ -2464,12 +2464,12 @@ export default function Index({ params }: any) {
 
                 <div className='flex flex-row gap-2 items-center justify-center'>
                   <span className="text-sm text-zinc-100">
-                    USDT지갑:{' '}
+                    지갑주소:{' '}
                   </span>
                   <button
                     onClick={() => {
                       navigator.clipboard.writeText(address);
-                      toast.success("USDT지갑주소가 복사되었습니다.");
+                      toast.success("지갑주소가 복사되었습니다.");
                     }}
                     className="text-sm underline text-zinc-100 hover:text-zinc-200"
                   >
@@ -2488,9 +2488,6 @@ export default function Index({ params }: any) {
                       {Number(balance).toFixed(2)}
                     </span>
                     {' '}
-                    <span className="text-sm text-zinc-100">
-                      USDT
-                    </span>
                   </div>
                 </div>
 
@@ -2630,7 +2627,7 @@ export default function Index({ params }: any) {
 
                     <div className=" flex flex-col gap-2 items-start">
                       <div className="text-5xl font-semibold text-zinc-500">
-                        {Number(balance).toFixed(2)} <span className="text-lg">USDT</span>
+                        {Number(balance).toFixed(3).replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
                       </div>
                     </div>
 
@@ -2775,11 +2772,11 @@ export default function Index({ params }: any) {
                             pb-2 mb-2
                             ">
                               <span className="text-sm text-zinc-500">
-                                테더 구매량(USDT)
+                                구매량:
                               </span>
                               <Image
-                                src="/logo-tether.png"
-                                alt="USDT"
+                                src="/token-ckec-icon.png"
+                                alt="CKEC"
                                 width={24}
                                 height={24}
                                 className="rounded-full w-6 h-6"
@@ -2877,6 +2874,7 @@ export default function Index({ params }: any) {
                                 </div>
 
                               {/* new window for upbit site */}
+                              {/*
                                 <a
                                   href="https://upbit.com/exchange?code=CRIX.UPBIT.KRW-USDT"
                                   target="_blank"
@@ -2896,6 +2894,31 @@ export default function Index({ params }: any) {
                                     />
                                   </div>
                                 </a>
+                              */}
+
+
+                                <a
+                                  href="https://www.lbank.com/"
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="flex flex-row gap-2 items-center justify-center"
+                                >
+                                  <div className='flex flex-row gap-2 items-center justify-center'>
+                                    <span className="text-sm text-zinc-500">
+                                      시세제공
+                                    </span>
+                                    <Image
+                                      src="/icon-lbank.png"
+                                      alt="lbank"
+                                      width={50}
+                                      height={50}
+                                      className="rounded-lg object-cover"
+                                    />
+                                  </div>
+                                </a>
+
+
+
 
 
                             </div>
